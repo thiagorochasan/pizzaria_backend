@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --transpile-only src/server.ts",
-    "vercel-build": "npx prisma migrate deploy"
+    "vercel-build": "npx prisma migrate deploy",
+    "postinstall": "prisma generate",
+    "build": "prisma generate && <actual-build-command>"
   },
   "keywords": [],
   "author": "",
