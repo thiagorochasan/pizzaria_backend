@@ -9,13 +9,13 @@ class CreateProductController{
 
         const createProductService = new CreateProductService();
 
-        if (!req.file) {
-            throw new Error("error upload file xxx")
-        }else
-        {
-            const { originalname, filename: banner } = req.file;
+        // if (!req.file) {
+        //     throw new Error("error upload file xxx")
+        // }else
+        // {
+            //const { originalname, filename: banner } = req.file;
 
-            //let banner = "";
+            let banner = "";
 
             const product = await createProductService.execute({
                 name,
@@ -26,7 +26,7 @@ class CreateProductController{
             });
 
             return res.json(product)
-        }
+        //}
     }
 
 }
